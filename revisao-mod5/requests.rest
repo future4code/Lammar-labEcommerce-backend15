@@ -1,4 +1,4 @@
-GET http://localhost:3003/character
+GET http://localhost:3003/character?name=d&orderType=DESC
 
 ###
 
@@ -10,3 +10,7 @@ Content-Type: application/json
     "gender":"MALE",
     "description":"O irmão do PROF X!!!!"
 }
+
+###
+
+DELETE http://localhost:3003/character/6

@@ -1,13 +1,16 @@
-import express, {Express} from "express";
-import cors from "cors"
+import express, { Express } from "express";
+import cors from "cors";
+import dotenv from "dotenv";
 
-const app: Express = express()
+dotenv.config();
 
-app.use(express.json())
-app.use(cors())
+const app: Express = express();
 
-app.listen(3003, ()=>{
-    console.log("Server ready!");
-})
+app.use(express.json());
+app.use(cors());
 
-export default app
+app.listen(process.env.PORT || 3003, () => {
+  console.log("Server ready!");
+});
+
+export default app;
